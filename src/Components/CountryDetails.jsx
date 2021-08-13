@@ -15,9 +15,13 @@ class CountryDetails extends Component {
 
         console.log(foundCountry)
 
+
         return (
             <div>
-            <h1>{foundCountry.name.common}</h1>
+            <h1>
+                <img style={{height:"1em", margin:"0.5em"}}src={`https://restcountries.eu/data/${foundCountry.cca3.toLowerCase()}.svg`} alt='flag' />
+                {foundCountry.name.common}
+            </h1>
 
             <table>
                 <tr>
@@ -33,7 +37,7 @@ class CountryDetails extends Component {
                     <td>
                         <ul>
                         {foundCountry.borders.map((country) => {
-                        return (<li key={country} style={{listStyle:"none"}}>{country}</li>)
+                        return (<li key={country} style={{listStyle:"none"}}>{getCountry(country).name.common}</li>)
                     })}
                         </ul>
                         </td>

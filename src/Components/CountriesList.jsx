@@ -11,7 +11,7 @@ const CountriesList = (props) => {
                     <Link to={{
                         pathname: '/'+ country.cca3,
                         state: country
-                    }}><li key={country.cca3}>{country.name.common}</li></Link>
+                    }}><li key={country.cca3} style={{listStyle:"none"}}>{country.name.common}</li></Link>
                     )
                 })}
             </ul>
