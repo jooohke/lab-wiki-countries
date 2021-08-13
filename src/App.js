@@ -19,17 +19,14 @@ export class App extends Component {
     return (
       <div className="App">
       <Navbar />
+
+
       <Switch>
         <Route exact path="/">
           <CountriesList 
             country={countriesList}/>
         </Route>
-        <Route 
-        exact path="/:cca3" 
-        render={
-          countriesList
-        }
-        component={CountryDetails} />
+        <Route path="/:cca3" component={CountryDetails} />
       </Switch>
     </div>
 
