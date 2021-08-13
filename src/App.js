@@ -19,15 +19,15 @@ export class App extends Component {
     return (
       <div className="App">
       <Navbar />
-
-
-      <Switch>
-        <Route exact path="/">
-          <CountriesList 
-            country={countriesList}/>
-        </Route>
-        <Route path="/:cca3" component={CountryDetails} />
-      </Switch>
+      <div className="container">
+        <div className="row">
+        <CountriesList country={countriesList}/>
+        <Switch>
+          <Route path="/:cca3" component={CountryDetails} />
+        </Switch>
+        </div>
+      </div>
+      
     </div>
 
     
